@@ -13,12 +13,30 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: const Text('App Title')),
-        body: const Center(
-          child: Text(
-            'Hello, World!',
-          ),
-        ),
+        appBar: AppBar(title: Text('App Title')),
+        body: Center(
+          // body: const Center(
+
+          child: Row(
+            // child: Text(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'I', // 'Hello, World!',
+                style: Theme.of(context).textTheme.headline2,
+              ),
+              Icon(
+                Icons.favorite,
+                color: Colors.redAccent,
+                size: 44,
+              ),
+              Text(
+                'Flutter',
+                style: Theme.of(context).textTheme.headline2,
+              ),
+            ],
+          ), // ),
+        ), // ),
       ),
     );
   }
